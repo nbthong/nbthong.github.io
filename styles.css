@@ -6,9 +6,6 @@ body {
   color: yellow;
   font-size: 300px;
   transform: translate(-50%, -50%);
-}
-
-.center{
   position: relative;
   top: 50%;
   left: 50%;
