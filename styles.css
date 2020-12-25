@@ -1,5 +1,11 @@
 body {
-  background-color: red;
+}
+
+.content {
+  background: #000;
+  max-width: 1080px;
+  margin: 0 auto;
+  height: 100%;
 }
 
 .icon{
@@ -18,6 +24,48 @@ body {
   transform: translate(-50%, -50%);
 }
 
-h1{
-  color: white;
+.flip-card {
+  background-color: transparent;
+  width: 500px;
+  height: 800px;
+  perspective: 1000px;
+  margin: 0 auto;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #151a1d;
+}
+
+.flip-card-back {
+  background-color: #ffffff;
+  transform: rotateY(180deg);
+}
+
+.center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
 }
